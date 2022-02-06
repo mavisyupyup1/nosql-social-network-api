@@ -26,7 +26,7 @@ const userController = {
         })
         .select('-__v')
         .then(dbUserData=>{
-            //if no pizza is found, send 404
+            //if no user is found, send 404
             if(!dbUserData){
                 res.status(404).json({message:'No user found with this id'})
                 return;
